@@ -1,0 +1,38 @@
+.contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  border: 2px dashed #ffb74d;
+}
+
+.fotoContenedor {
+  flex-shrink: 0;
+}
+
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.titulo {
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+
+.resena {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+}
