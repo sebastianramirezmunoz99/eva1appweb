@@ -1,40 +1,42 @@
-import Card from './Card';
+import Hero from './Hero';
 import PerroDelMes from './PerroDelMes';
-import logo from '../assets/logo.png';
+import Card from './Card';
+import logo from '../assets/logo.png'; 
 import perrito2despues from '../assets/perrito2despues.jpeg'
 
 const Home = () => {
   const serviciosDummy = [
-    { id: 1, titulo: "Baño Completo", descripcion: "Shampoo hipoalergénico y secado sin estrés.", imagen: logo },
-    { id: 2, titulo: "Corte de Raza", descripcion: "Estilistas expertos en los estándares de cada raza.", imagen: logo },
-    { id: 3, titulo: "Spa Relajante", descripcion: "Masajes y aromaterapia para perritos nerviosos.", imagen: logo },
-    { id: 4, titulo: "Corte de Uñas", descripcion: "Rápido, seguro y sin dolor para tu mascota.", imagen: logo }
+    { id: 1, titulo: "Baño Completo", descripcion: "Shampoo hipoalergénico.", imagen: logo },
+    { id: 2, titulo: "Corte de Raza", descripcion: "Estilistas expertos.", imagen: logo },
+    { id: 3, titulo: "Spa Relajante", descripcion: "Masajes y aromaterapia.", imagen: logo }
   ];
 
   return (
-    <div style={{ padding: '2rem' }}>
-      
-      {/* Componente que recibe datos mediante props */}
-      <PerroDelMes 
-        nombre="Cachupín"
-        resena="Antes le tenía terror al agua, pero aquí lo tratan con tanta paciencia que ahora mueve la cola cuando llegamos. ¡Quedó oliendo a vainilla!"
-        imagen={perrito2despues}
+    <div>
+      {/* 1. Sección Hero (Banner principal) */}
+      <Hero />
+
+      <div style={{ padding: '0 2rem' }}>
+        {/* 2. El valor agregado */}
+        <PerroDelMes 
+          nombre="Cachupín"
+          resena="¡Quedó oliendo a vainilla y muy feliz!"
+          imagen={perrito2despues} 
         />
 
-      <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#333' }}>Nuestros Servicios</h2>
-      
-      {/* Contenedor Flex para las Cards */}
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        {serviciosDummy.map((servicio) => (
-          <Card 
-            key={servicio.id}
-            titulo={servicio.titulo}
-            descripcion={servicio.descripcion}
-            imagen={servicio.imagen}
-          />
-        ))}
+        {/* 3. Las Cards de servicios en formato Flex */}
+        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#333' }}>Nuestros Servicios</h2>
+        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2rem' }}>
+          {serviciosDummy.map((servicio) => (
+            <Card 
+              key={servicio.id}
+              titulo={servicio.titulo}
+              descripcion={servicio.descripcion}
+              imagen={servicio.imagen}
+            />
+          ))}
+        </div>
       </div>
-
     </div>
   );
 };
