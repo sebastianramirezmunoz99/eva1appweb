@@ -1,43 +1,59 @@
-import Hero from './Hero';
+import MatrixRow from './MatrixRow';
 import PerroDelMes from './PerroDelMes';
 import Card from './Card';
 import logo from '../assets/logo.png'; 
+import styles from './Home.module.css';
 import perrito2despues from '../assets/perrito2despues.jpeg'
+import maquina from '../assets/maquinaperro.jpg'
+//import perrito2despues from '../assets/perrito2despues.jpeg'
+//import perrito2despues from '../assets/perrito2despues.jpeg'
+//import perrito2despues from '../assets/perrito2despues.jpeg'
 
 const Home = () => {
   const serviciosDummy = [
-    { id: 1, titulo: "Baño Completo", descripcion: "Shampoo hipoalergénico.", imagen: logo },
-    { id: 2, titulo: "Corte de Raza", descripcion: "Estilistas expertos.", imagen: logo },
-    { id: 3, titulo: "Spa Relajante", descripcion: "Masajes y aromaterapia.", imagen: logo }
+    { id: 1, titulo: "Baño Premium", descripcion: "Limpieza profunda con aceites naturales.", imagen: logo },
+    { id: 2, titulo: "Corte de Raza", descripcion: "Estilo profesional según el estándar.", imagen: logo },
+    { id: 3, titulo: "Corte de Uñas", descripcion: "Seguridad y cuidado para sus patitas.", imagen: logo }
   ];
 
   return (
-    <div>
-      {/* 1. Sección Hero (Banner principal) */}
-      <Hero />
+    <main>
+      {/* MATRIZ 2x2 */}
+      <MatrixRow 
+        titulo="Expertos en Cuidado"
+        contenido="Llevamos años brindando la mejor experiencia estética para mascotas en la región."
+        imagen={logo}
+        esInvertido={true} 
+      />
 
-      <div style={{ padding: '0 2rem' }}>
-        {/* 2. El valor agregado */}
+      <MatrixRow 
+        titulo="Equipamiento especializado"
+        contenido="Contamos con la tecnología apropiada para evitar el estrés de tu mejor amigo, silenciosa y confiable"
+        imagen={maquina}
+        esInvertido={false} 
+      />
+
+      {/*Perrito del mes*/}
+      <div style={{ padding: '2rem' }}>
         <PerroDelMes 
           nombre="Cachupín"
-          resena="¡Quedó oliendo a vainilla y muy feliz!"
+          resena="¡Quedó oliendo a vainilla y muy feliz! Excelente servicio en Talca."
           imagen={perrito2despues} 
         />
-
-        {/* 3. Las Cards de servicios en formato Flex */}
-        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#333' }}>Nuestros Servicios</h2>
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2rem' }}>
-          {serviciosDummy.map((servicio) => (
-            <Card 
-              key={servicio.id}
-              titulo={servicio.titulo}
-              descripcion={servicio.descripcion}
-              imagen={servicio.imagen}
-            />
-          ))}
-        </div>
       </div>
-    </div>
+
+      {/*Tarjetas*/}
+      <div className={styles.cardsContainer}>
+        {serviciosDummy.map((ser) => (
+          <Card 
+            key={ser.id}
+            titulo={ser.titulo}
+            descripcion={ser.descripcion}
+            imagen={ser.imagen}
+          />
+        ))}
+      </div>
+    </main>
   );
 };
 

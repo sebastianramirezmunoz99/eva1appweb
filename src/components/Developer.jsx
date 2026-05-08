@@ -1,9 +1,22 @@
-const Developer = () => {
-  return (
-    <div>
-      <h1>Perfil del Desarrollador</h1>
+import styles from './Developer.module.css'; 
+import fotoPerfil from '../assets/logo.png';
 
-    </div>
+const Developer = ({ datos }) => {
+  return (
+    <section className={styles.container}>
+      <div className={styles.profileCard}>
+        <img src={fotoPerfil} alt={datos.nombre} className={styles.image} />
+        <div className={styles.info}>
+          <h1>{datos.nombre}</h1>
+          <p><strong>Carrera:</strong> {datos.carrera}</p>
+          <p><strong>Ciudad:</strong> {datos.ciudad}</p>
+          <p>
+            <strong>GitHub:</strong> 
+            <a href={datos.github} target="_blank" rel="noreferrer" className={styles.link}> Ver Repositorio</a>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -12,7 +12,12 @@ function App() {
       <main style={{ minHeight: '80vh' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/developer" element={<Developer />} />
+          <Route path="/developer" element={<Developer datos={{
+            nombre: "Sebastián Ramírez",
+            carrera: "Ingeniería Civil Informática",
+            ciudad: "Talca",
+            github: "https://github.com/" 
+          }} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
