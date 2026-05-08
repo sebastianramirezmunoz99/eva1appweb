@@ -1,28 +1,28 @@
 import MatrixRow from './MatrixRow';
 import PerroDelMes from './PerroDelMes';
 import Card from './Card';
-import logo from '../assets/logo.png'; 
 import styles from './Home.module.css';
 import perrito2despues from '../assets/perrito2despues.jpeg'
 import maquina from '../assets/maquinaperro.jpg'
-//import perrito2despues from '../assets/perrito2despues.jpeg'
-//import perrito2despues from '../assets/perrito2despues.jpeg'
-//import perrito2despues from '../assets/perrito2despues.jpeg'
+import perrito2varios from '../assets/perrito2varios.jpeg'
+import perrito1despues from '../assets/perrito1despues.jpeg'
+import perrito1antes from '../assets/perrito1antes.jpeg'
+import cortaunas from '../assets/cortaunas.jpg'
 
 const Home = () => {
   const serviciosDummy = [
-    { id: 1, titulo: "Baño Premium", descripcion: "Limpieza profunda con aceites naturales.", imagen: logo },
-    { id: 2, titulo: "Corte de Raza", descripcion: "Estilo profesional según el estándar.", imagen: logo },
-    { id: 3, titulo: "Corte de Uñas", descripcion: "Seguridad y cuidado para sus patitas.", imagen: logo }
+    { id: 1, titulo: "Baño Premium", descripcion: "Limpieza profunda con aceites naturales.", imagen: perrito1antes },
+    { id: 2, titulo: "Corte de Raza", descripcion: "Estilo profesional según el estándar.", imagen: perrito1despues },
+    { id: 3, titulo: "Corte de Uñas", descripcion: "Seguridad y cuidado para sus patitas.", imagen: cortaunas }
   ];
 
   return (
     <main>
       {/* MATRIZ 2x2 */}
       <MatrixRow 
-        titulo="Expertos en Cuidado"
-        contenido="Llevamos años brindando la mejor experiencia estética para mascotas en la región."
-        imagen={logo}
+        titulo="Expertos en lo que hacemos"
+        contenido="Calidad de atencion y cuidados a nuestros peludos usuarios"
+        imagen={perrito2varios}
         esInvertido={true} 
       />
 

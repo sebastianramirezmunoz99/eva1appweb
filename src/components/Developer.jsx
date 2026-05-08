@@ -1,5 +1,5 @@
 import styles from './Developer.module.css'; 
-import fotoPerfil from '../assets/logo.png';
+import fotoPerfil from '../assets/developer.jpg';
 
 const Developer = ({ datos }) => {
   return (

@@ -16,7 +16,7 @@ function App() {
             nombre: "Sebastián Ramírez",
             carrera: "Ingeniería Civil Informática",
             ciudad: "Talca",
-            github: "https://github.com/" 
+            github: "https://github.com/sebastianramirezmunoz99/eva1appweb" 
           }} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
