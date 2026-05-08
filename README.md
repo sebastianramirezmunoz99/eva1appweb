@@ -3,7 +3,7 @@
 **Desarrollado por:** Sebastian Ramirez
 **Tecnologías:** React, Vite, CSS Modules, React Router DOM.
 
-**Despliegue en Vivo (Vercel):** [https://eva1appweb.vercel.app/]
+**Despliegue en Vercel:** [https://eva1appweb.vercel.app/]
 
 ## Ejecución local
 Pasos a seguir:
